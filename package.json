@@ -1,18 +1,25 @@
 {
-  "name": "portfolio",
+  "name": "mallikarjun-portfolio-website",
   "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@11.11.0",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.0.0"
+  },                                                
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "turbo dev",
     "build": "turbo build",
     "lint": "turbo lint",
     "test": "turbo test",
     "format": "prettier --write .",
-    "check-format": "prettier --check ."
+    "format:check": "prettier --check .",
+    "clean": "turbo clean"
   },
   "devDependencies": {
-    "turbo": "^2.5.4",
-    "prettier": "^3.6.2"
+    "only-allow": "^1.2.2",
+    "prettier": "^3.6.2",
+    "turbo": "^2.5.4"
   }
 }
