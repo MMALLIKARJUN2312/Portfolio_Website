@@ -5,7 +5,7 @@
   "packageManager": "pnpm@11.11.0",
   "engines": {
     "node": ">=22.0.0",
-    "pnpm": ">=10.0.0"
+    "pnpm": ">=11.11.0"
   },                                                
   "scripts": {
     "preinstall": "npx only-allow pnpm",
@@ -15,7 +15,7 @@
     "test": "turbo test",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "clean": "turbo clean"
+    "check": "pnpm lint && pnpm test && pnpm format:check"
   },
   "devDependencies": {
     "only-allow": "^1.2.2",
