@@ -1,0 +1,219 @@
+# Operating System
+
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+Icon?
+._*
+
+# Logs
+
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency Directories
+
+node_modules/
+.pnpm-store/
+
+# Package Managers
+
+package-lock.json
+yarn.lock
+
+# Lockfiles
+
+package-lock.json
+yarn.lock
+bun.lockb
+
+# Turborepo
+
+.turbo/
+
+# Next.js
+
+.next/
+out/
+
+# React / Vite
+
+dist/
+build/
+
+# Coverage
+
+coverage/
+.nyc_output/
+
+# Environment Variables
+
+.env
+.env.*
+!.env.example
+
+# Python
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Python Virtual Environments
+
+venv/
+.venv/
+env/
+ENV/
+
+# Python Build
+
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Pytest
+
+.pytest_cache/
+
+# Mypy
+
+.mypy_cache/
+
+# Ruff
+
+.ruff_cache/
+
+# Pyright
+
+.pyright/
+
+# Jupyter
+
+.ipynb_checkpoints/
+
+# FastAPI
+
+instance/
+
+# Alembic
+
+alembic/versions/*.pyc
+
+# Redis
+
+dump.rdb
+
+# Celery
+
+celerybeat-schedule
+
+# PostgreSQL
+
+*.db
+*.sqlite
+*.sqlite3
+
+# Docker
+
+docker-data/
+docker-volumes/
+
+# Terraform
+
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# AI / ML
+
+models/
+checkpoints/
+embeddings/
+vectorstores/
+faiss_index/
+chroma/
+*.bin
+*.pt
+*.pth
+*.onnx
+
+# LangChain
+
+.langchain/
+
+# Playwright
+
+playwright-report/
+test-results/
+
+# Cypress
+
+cypress/videos/
+cypress/screenshots/
+
+# Storybook
+
+storybook-static/
+
+# IDE
+
+.idea/
+.vscode/*
+
+# Keep workspace recommendations
+
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# Temporary Files
+
+tmp/
+temp/
+.cache/
+.cache-loader/
+
+# Mac
+
+.AppleDouble
+.LSOverride
+
+# Windows
+
+*.cab
+*.msi
+*.msix
+*.msp
+
+# Sentry
+
+.sentryclirc
+
+# Secrets
+
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Local AI Config
+
+.openai
+.anthropic
+.gemini
+
+# Generated Files
+
+*.generated.*
