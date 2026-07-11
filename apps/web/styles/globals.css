@@ -1,8 +1,24 @@
 @import "./theme.css";
+@import "./layout.css";
+@import "./typography.css";
 
-/*
- * Global styles.
- *
- * Additional global rules will be introduced
- * as the design system evolves.
-*/
+html {
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}

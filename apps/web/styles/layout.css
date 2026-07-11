@@ -1,0 +1,17 @@
+:root {
+  /* Content Widths */
+  --container-xs: 640px;
+  --container-sm: 768px;
+  --container-md: 1024px;
+  --container-lg: 1280px;
+  --container-xl: 1440px;
+
+  /* Page Rhythm */
+  --section-spacing-xs: 3rem;
+  --section-spacing-sm: 5rem;
+  --section-spacing-md: 7rem;
+  --section-spacing-lg: 10rem;
+
+  /* Layout */
+  --page-padding: clamp(1rem, 3vw, 2rem);
+}
