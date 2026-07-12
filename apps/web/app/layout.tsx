@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
+import { Providers } from "@/providers";
 
 export const metadata: Metadata = {
-  title: "Mallikarjun | Software Engineer",
-  description: "Production-grade portfolio showcasing software engineering, AI, and full-stack projects.",
+  metadataBase : new URL('https://my-domain.com'),
+  title: {
+    default : "Mallikarjun | Software Engineer",
+    template : '%s | Mallikarjun'
+  },
+  description: "Production-grade software engineering portfolio showcasing AI, system design, and full-stack development.",
 };
 
 export default function RootLayout({
@@ -15,7 +20,9 @@ export default function RootLayout({
     <html
       lang="en"
     >
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
