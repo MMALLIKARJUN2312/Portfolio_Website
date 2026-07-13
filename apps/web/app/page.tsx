@@ -1,4 +1,4 @@
-import {Container, Heading, Section, Stack, Text} from '@/components/primitives'
+import {Container, Heading, Section, Stack, Text} from '@/components/ui'
 
 export default function HomePage() {
   return (
