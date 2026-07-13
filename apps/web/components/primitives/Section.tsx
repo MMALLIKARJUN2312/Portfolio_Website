@@ -1,4 +1,5 @@
 import type {ComponentPropsWithoutRef} from 'react';
+import {cn} from '@/lib/cn';
 
 export function Section ({
     className = '',
@@ -6,7 +7,7 @@ export function Section ({
 }: ComponentPropsWithoutRef<'div'>) {
     return (
         <div 
-           className = {`py-24 ${className}`}
+           className = {cn('py-24', className)}
            {...props}
         />
     )

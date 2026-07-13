@@ -1,4 +1,5 @@
 import type {ComponentPropsWithoutRef} from 'react';
+import {cn} from '@/lib/cn';
 
 export function Container ({
     className = '',
@@ -6,7 +7,7 @@ export function Container ({
 }: ComponentPropsWithoutRef<'div'>) {
     return (
         <div 
-           className = {`mx-auto w-full max-w-screen-xl px-6 ${className}`}
+           className = {cn('mx-auto w-full max-w-screen-xl px-6', className)}
            {...props}
         />
     )
