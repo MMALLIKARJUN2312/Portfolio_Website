@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "@/providers";
-import {Inter, Space_Grotesk} from "next/font/google";
+import {Inter, Space_Grotesk, Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const inter = Inter({
   subsets : ['latin'],
@@ -32,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable}`}
+      className={cn(inter.variable, spaceGrotesk.variable, "font-sans", geist.variable)}
     >
       <body>
         <Providers>{children}</Providers>
