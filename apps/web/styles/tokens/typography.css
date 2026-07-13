@@ -3,6 +3,10 @@
   --font-family-sans: Inter, ui-sans-serif, system-ui, sans-serif;
   --font-family-mono: "JetBrains Mono", ui-monospace,monospace;
 
+  --font-body: var(--font-family-sans);
+  --font-display: var(--font-family-display);
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
   /* Font Weights */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
