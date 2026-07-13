@@ -7,8 +7,8 @@ const surfaceVariants = cva(
   {
     variants : {
       variant : {
-        default: "bg-(--color-surface) border-(--color-border)",
-        elevated: "bg-(--color-surface-elevated) shadow-lg",
+        default: "bg-(--card) border-(--border)",
+        elevated: "bg-(--popover) shadow-lg",
         ghost: "border-transparent bg-transparent",
       }, 
       padding : {

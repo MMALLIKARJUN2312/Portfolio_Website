@@ -1,34 +1,47 @@
 :root {
-  /* Backgrounds */
-  --color-background: #ffffff;
-  --color-surface: #f8fafc;
-  --color-surface-elevated: #ffffff;
+  /*
+   * Brand Palette
+   */
+  --brand-50: #eff6ff;
+  --brand-100: #dbeafe;
+  --brand-200: #bfdbfe;
+  --brand-300: #93c5fd;
+  --brand-400: #60a5fa;
+  --brand-500: #3b82f6;
+  --brand-600: #2563eb;
+  --brand-700: #1d4ed8;
+  --brand-800: #1e40af;
+  --brand-900: #1e3a8a;
 
-  /* Foreground */
-  --color-foreground: #0f172a;
-  --color-foreground-muted: #475569;
+  /*
+   * Semantic Tokens
+   */
+  --background: #ffffff;
+  --foreground: #0f172a;
 
-  /* Brand */
-  --color-primary: #2563eb;
-  --color-primary-foreground: #ffffff;
+  --card: #ffffff;
+  --card-foreground: var(--foreground);
 
-  /* Secondary */
-  --color-secondary: #e2e8f0;
-  --color-secondary-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: var(--foreground);
 
-  /* Accent */
-  --color-accent: #7c3aed;
-  --color-accent-foreground: #ffffff;
+  --primary: var(--brand-600);
+  --primary-foreground: #ffffff;
 
-  /* Border */
-  --color-border: #e2e8f0;
+  --secondary: #e2e8f0;
+  --secondary-foreground: var(--foreground);
 
-  /* Feedback */
-  --color-success: #16a34a;
-  --color-warning: #d97706;
-  --color-danger: #dc2626;
-  --color-info: #0284c7;
+  --accent: #7c3aed;
+  --accent-foreground: #ffffff;
 
-  /* Focus */
-  --color-ring: #2563eb;
+  --muted: #f8fafc;
+  --muted-foreground: #475569;
+
+  --border: #e2e8f0;
+  --ring: var(--brand-600);
+
+  --success: #16a34a;
+  --warning: #d97706;
+  --destructive: #dc2626;
+  --info: #0284c7;
 }
