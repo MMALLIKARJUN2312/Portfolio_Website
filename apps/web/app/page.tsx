@@ -1,13 +1,15 @@
-import {Container, Heading, Section, Stack, Text} from '@/components/ui'
+import {Container, Heading, Section, Stack, Surface, Text} from '@/components/ui'
 
 export default function HomePage() {
   return (
     <Section>
         <Container>
-            <Stack>
-                <Heading>Production Portfolio</Heading>
-                <Text>Foundation successfully established</Text>
-            </Stack>
+            <Surface>
+                <Stack>
+                    <Heading>Production Portfolio</Heading>
+                    <Text>Our design system is taking shape</Text>
+                </Stack>
+            </Surface>
         </Container>
     </Section>
   );
