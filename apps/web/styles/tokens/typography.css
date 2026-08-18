@@ -1,8 +1,8 @@
 :root {
   /* Font Families */
-  --font-sans: var(--font-family-sans);
-  --font-heading: var(--font-family-display);
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
   /* Font Weights */
   --font-weight-regular: 400;
