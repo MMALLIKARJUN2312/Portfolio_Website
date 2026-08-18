@@ -1,7 +1,7 @@
-import type {ComponentPropsWithoutRef} from 'react';
+import type { ComponentPropsWithoutRef } from 'react';
 
 type TextProps = ComponentPropsWithoutRef<'p'>;
 
-export function Text(props : TextProps) {
-    return <p {...props} />
+export function Text(props: TextProps) {
+  return <p {...props} />;
 }
