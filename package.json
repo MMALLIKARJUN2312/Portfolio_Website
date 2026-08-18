@@ -6,16 +6,17 @@
   "engines": {
     "node": ">=22.0.0",
     "pnpm": ">=11.11.0"
-  },                                                
+  },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "turbo dev",
     "build": "turbo build",
     "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
     "test": "turbo test",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "check": "pnpm lint && pnpm test && pnpm format:check"
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm format:check"
   },
   "devDependencies": {
     "only-allow": "^1.2.2",
