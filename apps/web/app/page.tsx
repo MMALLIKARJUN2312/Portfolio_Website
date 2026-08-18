@@ -1,16 +1,19 @@
-import {Container, Heading, Section, Stack, Surface, Text} from '@/components/ui'
+import { Footer, Navigation } from '@/components/layout';
+import { About, Contact, Experience, Hero, Projects, Skills } from '@/components/sections';
 
 export default function HomePage() {
   return (
-    <Section>
-        <Container>
-            <Surface>
-                <Stack>
-                    <Heading>Production Portfolio</Heading>
-                    <Text>Our design system is taking shape</Text>
-                </Stack>
-            </Surface>
-        </Container>
-    </Section>
+    <>
+      <Navigation />
+      <main id="main-content">
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
