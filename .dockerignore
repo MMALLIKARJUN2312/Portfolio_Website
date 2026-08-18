@@ -1,0 +1,11 @@
+**/node_modules
+**/.next
+**/.turbo
+**/dist
+**/out
+.git
+.github
+.vscode
+**/*.log
+.env
+.env.*
