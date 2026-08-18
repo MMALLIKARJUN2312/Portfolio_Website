@@ -1,7 +1,13 @@
-import type {ComponentPropsWithoutRef} from 'react';
+import type { ComponentPropsWithoutRef } from 'react';
 
-type HeadingProps = ComponentPropsWithoutRef<'h2'>;
+type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
 
-export function Heading(props : HeadingProps) {
-    return <h2 {...props} />
+type HeadingProps = ComponentPropsWithoutRef<'h1'> & {
+  level?: HeadingLevel;
+};
+
+export function Heading({ level = 2, ...props }: HeadingProps) {
+  const Component = `h${level}` as const;
+
+  return <Component {...props} />;
 }
