@@ -169,7 +169,14 @@ export const education = {
   period: 'Aug 2019 – Jul 2023',
 };
 
-export const awards = [
+export type Honor = {
+  name: string;
+  description: string;
+  /** Path under /public to a certificate/award image, once one is provided. */
+  imageUrl?: string;
+};
+
+export const awards: Honor[] = [
   {
     name: 'AMD Slingshot Ideathon',
     description: "Participated in AMD's Slingshot Ideathon.",
@@ -185,5 +192,6 @@ export const navLinks = [
   { href: '#skills', label: 'Skills' },
   { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
+  { href: '#honors', label: 'Honors' },
   { href: '#contact', label: 'Contact' },
 ] as const;

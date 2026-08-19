@@ -1,11 +1,12 @@
 import { Container, Heading, Reveal, Section, Surface, Text } from '@/components/ui';
-import { awards, experience } from '@/lib/content';
+import { experience } from '@/lib/content';
 
 export function Experience() {
   return (
-    <Section id="experience" className="border-t border-border">
+    <Section id="experience" className="border-t border-border/60">
       <Container>
         <Reveal>
+          <div aria-hidden="true" className="mb-4 h-1 w-10 rounded-full bg-primary" />
           <Heading level={2} className="text-3xl font-semibold tracking-tight">
             Experience
           </Heading>
@@ -15,7 +16,7 @@ export function Experience() {
           {experience.map((entry, index) => (
             <li key={`${entry.org}-${entry.role}`}>
               <Reveal delayMs={index * 75}>
-                <Surface variant="default" padding="lg">
+                <Surface variant="glass" padding="lg" interactive>
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
                     <Text className="font-medium text-foreground">
                       {entry.role} · {entry.org}
@@ -34,22 +35,6 @@ export function Experience() {
             </li>
           ))}
         </ol>
-
-        <Reveal delayMs={experience.length * 75}>
-          <div className="mt-10">
-            <Text className="text-sm font-medium text-foreground">
-              Additional experience &amp; awards
-            </Text>
-            <ul className="mt-4 flex flex-col gap-2">
-              {awards.map((award) => (
-                <li key={award.name} className="text-sm text-muted-foreground">
-                  <span className="font-medium text-foreground">{award.name}:</span>{' '}
-                  {award.description}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Reveal>
       </Container>
     </Section>
   );
