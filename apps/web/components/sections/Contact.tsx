@@ -1,15 +1,20 @@
 import { Code2, Briefcase, Mail } from 'lucide-react';
-import { Container, Heading, Reveal, Section, Text } from '@/components/ui';
+import { Container, Heading, Reveal, Section, Surface, Text } from '@/components/ui';
 import { buttonVariants } from '@/components/ui/button';
 import { profile } from '@/lib/content';
 import { cn } from '@/lib/utils';
 
 export function Contact() {
   return (
-    <Section id="contact" className="border-t border-border">
+    <Section id="contact" className="relative overflow-hidden border-t border-border/60">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
+        <div className="glow-blob absolute bottom-[-20%] left-1/2 h-[360px] w-[360px] -translate-x-1/2 rounded-full bg-primary/15 blur-3xl" />
+      </div>
+
       <Container>
         <Reveal>
-          <div className="mx-auto max-w-xl text-center">
+          <Surface variant="glass" padding="lg" className="mx-auto max-w-xl text-center">
+            <div aria-hidden="true" className="mx-auto mb-4 h-1 w-10 rounded-full bg-primary" />
             <Heading level={2} className="text-3xl font-semibold tracking-tight">
               Get in touch
             </Heading>
@@ -33,7 +38,7 @@ export function Contact() {
                 href={profile.github}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-all duration-normal ease-standard hover:text-primary"
               >
                 <Code2 className="size-4" aria-hidden="true" />
                 GitHub
@@ -42,13 +47,13 @@ export function Contact() {
                 href={profile.linkedin}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-all duration-normal ease-standard hover:text-primary"
               >
                 <Briefcase className="size-4" aria-hidden="true" />
                 LinkedIn
               </a>
             </div>
-          </div>
+          </Surface>
         </Reveal>
       </Container>
     </Section>

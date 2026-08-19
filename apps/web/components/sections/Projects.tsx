@@ -4,9 +4,10 @@ import { projects } from '@/lib/content';
 
 export function Projects() {
   return (
-    <Section id="projects" className="border-t border-border">
+    <Section id="projects" className="border-t border-border/60">
       <Container>
         <Reveal>
+          <div aria-hidden="true" className="mb-4 h-1 w-10 rounded-full bg-primary" />
           <Heading level={2} className="text-3xl font-semibold tracking-tight">
             Projects
           </Heading>
@@ -15,7 +16,12 @@ export function Projects() {
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {projects.map((project, index) => (
             <Reveal key={project.name} delayMs={(index % 2) * 75}>
-              <Surface variant="default" padding="lg" className="flex h-full flex-col">
+              <Surface
+                variant="glass"
+                padding="lg"
+                interactive
+                className="group flex h-full flex-col"
+              >
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <Text className="font-medium text-foreground">{project.name}</Text>
@@ -28,7 +34,7 @@ export function Projects() {
                     target="_blank"
                     rel="noreferrer noopener"
                     aria-label={`${project.name} on GitHub`}
-                    className="shrink-0 rounded-md text-muted-foreground transition-colors hover:text-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none"
+                    className="shrink-0 rounded-md text-muted-foreground transition-all duration-normal ease-standard group-hover:text-primary hover:text-primary focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none"
                   >
                     <ExternalLink className="size-4" aria-hidden="true" />
                   </a>

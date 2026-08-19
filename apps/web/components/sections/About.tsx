@@ -3,9 +3,10 @@ import { education, profile } from '@/lib/content';
 
 export function About() {
   return (
-    <Section id="about" className="border-t border-border">
+    <Section id="about" className="border-t border-border/60">
       <Container>
         <Reveal>
+          <div aria-hidden="true" className="mb-4 h-1 w-10 rounded-full bg-primary" />
           <Heading level={2} className="text-3xl font-semibold tracking-tight">
             About
           </Heading>
