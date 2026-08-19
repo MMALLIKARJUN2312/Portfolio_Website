@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Code2, Briefcase, Menu, X } from 'lucide-react';
-import { Container, IconLink } from '@/components/ui';
+import { Container, IconLink, ThemeToggle } from '@/components/ui';
 import { buttonVariants } from '@/components/ui/button';
 import { navLinks, profile } from '@/lib/content';
 import { cn } from '@/lib/utils';
@@ -12,11 +12,11 @@ export function Navigation() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-(--z-sticky) border-b border-border bg-background/80 backdrop-blur-md">
+    <header className="sticky top-0 z-(--z-sticky) border-b border-border/60 bg-background/70 shadow-sm backdrop-blur-xl">
       <Container className="flex h-16 items-center justify-between">
         <Link
           href="#top"
-          className="rounded-md text-sm font-semibold tracking-tight focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none"
+          className="rounded-md text-sm font-semibold tracking-tight transition-colors duration-normal ease-standard hover:text-primary focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none"
         >
           {profile.name}
         </Link>
@@ -26,7 +26,7 @@ export function Navigation() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="relative text-sm text-muted-foreground transition-colors duration-normal ease-standard after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-primary after:transition-all after:duration-normal after:ease-standard hover:text-foreground hover:after:w-full"
             >
               {link.label}
             </a>
@@ -34,6 +34,7 @@ export function Navigation() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
+          <ThemeToggle />
           <IconLink
             href={profile.github}
             label="GitHub profile"
@@ -57,27 +58,30 @@ export function Navigation() {
           </a>
         </div>
 
-        <button
-          type="button"
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          onClick={() => setOpen((value) => !value)}
-          className="inline-flex size-9 items-center justify-center rounded-lg border border-border text-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none md:hidden"
-        >
-          {open ? (
-            <X className="size-5" aria-hidden="true" />
-          ) : (
-            <Menu className="size-5" aria-hidden="true" />
-          )}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            onClick={() => setOpen((value) => !value)}
+            className="inline-flex size-9 items-center justify-center rounded-lg border border-border text-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none"
+          >
+            {open ? (
+              <X className="size-5" aria-hidden="true" />
+            ) : (
+              <Menu className="size-5" aria-hidden="true" />
+            )}
+          </button>
+        </div>
       </Container>
 
       {open ? (
         <nav
           id="mobile-nav"
           aria-label="Mobile"
-          className="border-t border-border bg-background md:hidden"
+          className="border-t border-border/60 bg-background/95 backdrop-blur-xl md:hidden"
         >
           <Container className="flex flex-col gap-1 py-4">
             {navLinks.map((link) => (

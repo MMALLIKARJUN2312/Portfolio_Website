@@ -9,3 +9,4 @@ export * from './Section';
 export * from './Stack';
 export * from './Surface';
 export * from './Text';
+export * from './ThemeToggle';
